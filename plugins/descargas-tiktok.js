@@ -6,8 +6,8 @@ import {generateWAMessageFromContent} from '@whiskeysockets/baileys';
 import {tiktokdl} from '@bochilteam/scraper';
 const CFROSAPI = global.APIs.CFROSAPI;
 const handler = async (m, {conn, text, args, usedPrefix, command}) => {
-  if (!text) throw `_*< تحميل - تيك توك />*_\n\n*[ ℹ️ ] أدخل في عناق تيك توك.*\n\n*[ 💡 ] مثال:* _${usedPrefix + command} https://vm.tiktok.com/ZM686Q4ER/_`;
-  if (!/(?:https:?\/{2})?(?:w{3}|vm|vt|t)?\.?tiktok.com\/([^\s&]+)/gi.test(text)) throw `_*< تحميل - تيك توك/>*_\n\n*[ ℹ️ ] أدخل في عناق تيك توك.*\n\n*[ 💡 ] مثال:* _${usedPrefix + command} https://vm.tiktok.com/ZM686Q4ER/_`;
+  if (!text) throw `_*< تحميل - تيك توك />*_\n\n*[ ℹ️ ] أدخل في رابط تيك توك.*\n\n*[ 💡 ] مثال:* _${usedPrefix + command} https://vm.tiktok.com/ZM686Q4ER/_`;
+  if (!/(?:https:?\/{2})?(?:w{3}|vm|vt|t)?\.?tiktok.com\/([^\s&]+)/gi.test(text)) throw `_*< تحميل - تيك توك/>*_\n\n*[ ℹ️ ] أدخل في رابط تيك توك.*\n\n*[ 💡 ] مثال:* _${usedPrefix + command} https://vm.tiktok.com/ZM686Q4ER/_`;
   const texto = `_*< تحميل - تيك توك />*_\n\n*[ ℹ️ ] أنت تبحث عن الفيديو. يأمل...*`;
   // let buttons = [{ buttonText: { displayText: '♫ 𝙰𝚄𝙳𝙸𝙾 ♫' }, buttonId: `${usedPrefix}tomp3` }]
   try {
