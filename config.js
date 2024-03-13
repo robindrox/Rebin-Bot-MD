@@ -8,49 +8,25 @@ import axios from 'axios';
 import moment from 'moment-timezone';
 
 global.botnumber = ""
-global.confirmCode = ""
 
 global.owner = [
-  ['5219992095479', '👑 Mystic - Creador 👑', true],
-  ['50499698072', '💫 Mystic - Collaborator 1 💫', true],
-  ['51940617554', '💫 Mystic - Collaborator 2 💫', true],
-  ['51996089079', '💫 Mystic - Collaborator 3 💫', true],
-  ['5218442286089', '💫 Mystic - Collaborator 4 💫', true],
-  ['50246028932', '💫 Mystic - Collaborator 5 💫', true],
-  ['5212412377467', '💫 Mystic - Collaborator 6 💫', true],
-  ['5215517489568', '💫 Mystic - Rey Endymion 💫', false],
-  ['59895555511', '💫 Mystic - Collaborator 8 💫', true],
-  ['59177601773', '💫 Mystic - By Alba070503 💫', true],
-  ['393518398856','💫 Mystic - Tester Fabri115💫', true],
-  ['593968585283'],
-  ['5219993404349'],
-  ['5219991402134'],
-  ['5492266466080'],
-  ['5219996125657'],
-  ['5218442114446'],
-  ['59894808483'],
-  ['593980586516'], 
-  ['595975740803'],  
-  ['5492266613038'],
-  ['50497150165'],
-  ['51906662557'],
-  ['573183650526'], 
-  ['5217441298510'], 
-  ['5217294888993'],
-  ['595992611272']
+  ['212766343649', '🧞‍♂️𝑳𝑨𝑾🧞‍♂️', true],
+
+  ['212677519428','☀️𝙏𝙊𝙉𝙔☀️', true],
+  ['212677519428'],
+  ['212677519428']
 ];
 
-global.suittag = ['5219993404349'];
-global.prems = ['51995386439'];
+global.suittag = ['212677519428','212766343649'];
+global.prems = ['212677519428','212766343649'];
 
-global.packname = 'Sticker';
-global.author = 'The Mystic - Bot';
-global.wm = 'The Mystic - Bot';
-global.titulowm = 'The Mystic - Bot';
-global.titulowm2 = `The Mystic - Bot`
-global.igfg = 'The Mystic - Bot';
-global.wait = '*[ ⏳ ] Cargando...*';
-
+global.packname = '☀️𝐃𝐑𝐎𝐗 𝐁𝐎𝐓☀️';
+global.author = '☀️𝐃𝐑𝐎𝐗 𝐁𝐎𝐓☀️';
+global.wm = '☀️𝐃𝐑𝐎𝐗 𝐁𝐎𝐓☀️';
+global.titulowm = '☀️𝐃𝐑𝐎𝐗 𝐁𝐎𝐓☀️';
+global.titulowm2 = `☀️𝐃𝐑𝐎𝐗 𝐁𝐎𝐓☀️`
+global.igfg = '☀️𝐃𝐑𝐎𝐗 𝐁𝐎𝐓☀️';
+global.wait = '*|🏃|جاري تنفيذ طلبكم....*\n*┋✮ ⃟☀️انضم لقناة المطورين للتوصل بكل تحديثات البوت⟩:*⌝ https://whatsapp.com/channel/0029VaPKw80545v4X6ounM0b ⌞';
 global.imagen1 = fs.readFileSync('./Menu2.jpg');
 global.imagen2 = fs.readFileSync('./src/nuevobot.jpg');
 global.imagen3 = fs.readFileSync('./src/Pre Bot Publi.png');
@@ -62,22 +38,22 @@ global.mods = [];
 
 //* *******Tiempo***************
 global.d = new Date(new Date + 3600000);
-global.locale = 'es';
+global.locale = 'en';
 global.dia = d.toLocaleDateString(locale, {weekday: 'long'});
-global.fecha = d.toLocaleDateString('es', {day: 'numeric', month: 'numeric', year: 'numeric'});
-global.mes = d.toLocaleDateString('es', {month: 'long'});
-global.año = d.toLocaleDateString('es', {year: 'numeric'});
+global.fecha = d.toLocaleDateString('en', {day: 'numeric', month: 'numeric', year: 'numeric'});
+global.mes = d.toLocaleDateString('en', {month: 'long'});
+global.año = d.toLocaleDateString('en', {year: 'numeric'});
 global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true});
 //* ****************************
-global.wm2 = `${dia} ${fecha}\nThe Mystic - Bot`;
-global.gt = 'The Mystic - Bot';
-global.mysticbot = 'The Mystic - Bot';
-global.md = 'https://github.com/BrunoSobrino/TheMystic-Bot-MD';
-global.mysticbot = 'https://github.com/BrunoSobrino/TheMystic-Bot-MD';
-global.waitt = '*[ ⏳ ] Cargando...*';
-global.waittt = '*[ ⏳ ] Cargando...*';
-global.waitttt = '*[ ⏳ ] Cargando...*';
-global.nomorown = '5219993404349';
+global.wm2 = `${dia} ${fecha}\n☀️𝐃𝐑𝐎𝐗 𝐁𝐎𝐓☀️`;
+global.gt = '☀️𝐃𝐑𝐎𝐗 𝐁𝐎𝐓☀️';
+global.mysticbot = '𝐃𝐑𝐎𝐗 𝐁𝐎𝐓';
+global.md = 'https://whatsapp.com/channel/0029VaPKw80545v4X6ounM0b';
+global.mysticbot = 'https://whatsapp.com/channel/0029VaPKw80545v4X6ounM0b';
+global.waitt = '*┋✮ ⃟☀️جاري تنفيذ طلبكم....*';
+global.waittt = '*┋✮ ⃟☀️جاري تنفيذ طلبكم....*';
+global.waitttt = '*┋✮ ⃟☀️جاري تنفيذ طلبكم....*';
+global.nomorown = '212677519428','212766343649';
 global.pdoc = ['application/vnd.openxmlformats-officedocument.presentationml.presentation', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/vnd.ms-excel', 'application/msword', 'application/pdf', 'text/rtf'];
 global.cmenut = '❖––––––『';
 global.cmenub = '┊✦ ';
