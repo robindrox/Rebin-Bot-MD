@@ -15,7 +15,7 @@ const handler = async (m, {conn, text, args, usedPrefix, command}) => {
     const prep = generateWAMessageFromContent(m.chat, {extendedTextMessage: {text: texto, contextInfo: {externalAdReply: {title: 'ᴛʜᴇ ᴍʏsᴛɪᴄ - ʙᴏᴛ', body: null, thumbnail: imagen1, sourceUrl: 'https://github.com/BrunoSobrino/TheMystic-Bot-MD'}, mentionedJid: [m.sender]}}}, aa);
     await conn.relayMessage(m.chat, prep.message, {messageId: prep.key.id, mentions: [m.sender]});
     const dataFn = await conn.getFile(`${CFROSAPI}/api/tiktokv2?url=${args[0]}`);
-    const desc1n = `_*< تحميل - تيك توك />*_\n\n*☀️𝐃𝐑𝐎𝐗 𝐁𝐎𝐓☀️*`;
+    const desc1n = `*☀️𝐃𝐑𝐎𝐗 𝐁𝐎𝐓☀️*`;
     await conn.sendMessage(m.chat, {video: dataFn.data, caption: desc1n}, {quoted: m});
   } catch (ee1) {
   try {
