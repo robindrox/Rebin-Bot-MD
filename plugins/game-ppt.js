@@ -4,7 +4,7 @@ const handler = async (m, {conn, text, command, usedPrefix, args}) => {
 
   // 60000 = 1 minuto // 30000 = 30 segundos // 15000 = 15 segundos // 10000 = 10 segundos
   const time = global.db.data.users[m.sender].wait + 10000;
-  if (new Date - global.db.data.users[m.sender].wait < 10000) throw `*🕓 Tendrás que esperar ${Math.floor((time - new Date()) / 1000)} segundos antes de poder volver a jugar*`;
+  if (new Date - global.db.data.users[m.sender].wait < 10000) throw `*🕓 سوف تضطر للانتظار ${Math.floor((time - new Date()) / 1000)} ثواني قبل أن تتمكن من اللعب مرة أخرى*`;
 
   if (!args[0]) return conn.reply(m.chat, `*حجر 🗿 ورق 📄 مقص ✂️*\n\n*—◉ يمكنك استخدام هذه الأوامر:*\n*◉ ${usedPrefix + command} حجر*\n*◉ ${usedPrefix + command} ورق*\n*◉ ${usedPrefix + command} مقص*`, m);
   // conn.sendButton(m.chat, `*حجر 🗿 ورق 📄 مقص ✂️*\n\n*—◉  𝙿𝚎𝚍𝚎𝚜 𝚞𝚜𝚊𝚛 𝚕𝚘𝚜 𝚋𝚘𝚝𝚘𝚗𝚎𝚜 𝚙𝚊𝚛𝚊 𝚓𝚞𝚐𝚊𝚛 𝚘 𝚝𝚊𝚖𝚋𝚒𝚎𝚗 𝚙𝚞𝚎𝚍𝚎𝚜 𝚞𝚜𝚊𝚛 𝚎𝚜𝚝𝚘𝚜 𝚌𝚘𝚖𝚊𝚗𝚍𝚘𝚜:*\n*◉ ${usedPrefix + command} حجر*\n*◉ ${usedPrefix + command} ورق*\n*◉ ${usedPrefix + command} مقص*`, wm, pp, [['Piedra 🗿', `${usedPrefix + command} piedra`], ['Papel 📄', `${usedPrefix + command} papel`], ['Tijera ✂️', `${usedPrefix + command} tijera`]], m)
