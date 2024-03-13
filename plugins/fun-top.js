@@ -15,10 +15,10 @@ function handler(m, {groupMetadata, command, conn, text, usedPrefix}) {
   const i = ps.getRandom();
   const j = ps.getRandom();
   const k = Math.floor(Math.random() * 70);
-  const x = `${pickRandom(['🤓', '😅', '😂', '😳', '😎', '🥵', '😱', '🤑', '🙄', '💩', '🍑', '🤨', '🥴', '🔥', '👇🏻', '😔', '👀', '🌚'])}`;
+  const x = `${pickRandom(['🤓', '😅', '😂', '😳', '😎', '💗', '😱', '🤑', '🙄', '👾', '🌹', '🤨', '🥴', '🔥', '👇🏻', '😔', '👀', '🌚'])}`;
   const l = Math.floor(Math.random() * x.length);
   const vn = `https://hansxd.nasihosting.com/sound/sound${k}.mp3`;
-  const top = `*${x} Top 10 ${text} ${x}*
+  const top = `*${x} توب 10 ${text} ${x}*
     
 *1. ${user(a)}*
 *2. ${user(b)}*
@@ -35,7 +35,7 @@ function handler(m, {groupMetadata, command, conn, text, usedPrefix}) {
     type: 'audioMessage',
     ptt: true});
 }
-handler.help = handler.command = ['top'];
+handler.help = handler.command = ['توب'];
 handler.tags = ['fun'];
 handler.group = true;
 handler.limit = 2;
