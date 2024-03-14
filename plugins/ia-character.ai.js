@@ -2,7 +2,7 @@ import fetch from 'node-fetch';
 
 const handler = async (m, {conn, text, usedPrefix, command}) => {
   if (!text) {
-    throw `_*< IA - CHARACTER.AI />*_\n\n*[ ℹ️ ] Proporciona un texto.*\n\n*[ 💡 ] Ejemplo:* _${usedPrefix + command} Hola, ¿cómo estás?_`;
+    throw `_*< شخصيات الذكاء الاصطناعي*_\n\n*[ ℹ️ ] استعمل الأمر هكذا.*\n\n*[ 💡 ] مثال:* _${usedPrefix + command} مرحبا, ¿كيف حالك?_`;
   }
 
   try {
@@ -16,7 +16,7 @@ const handler = async (m, {conn, text, usedPrefix, command}) => {
       const respuestaAPI = data.data;
       conn.reply(m.chat, respuestaAPI, m);
     } else {
-      throw '_*< IA - CHARACTER.AI />*_\n\n*[ ℹ️ ] No se pudo obtener una respuesta válida.*';
+      throw '_*< شخصيات الذكاء الاصطناعي/>*_\n\n*[ ℹ️ ] هناك خطأ.*';
     }
   } catch (error) {
     throw `_*< IA - CHARACTER.AI />*_\n\n*[ ℹ️ ] Ocurrió un error. Por favor, inténtalo de nuevo más tarde.*`;
