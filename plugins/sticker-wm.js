@@ -1,14 +1,14 @@
 import {addExif} from '../lib/sticker.js';
 const handler = async (m, {conn, text}) => {
-  if (!m.quoted) throw '*[❗معلومة❗] قم بالرد على الملصق الذي تريد تجميع حزمة ورقم*';
+  if (!m.quoted) throw '*[❗معلومة❗] قم بالرد على الملصق الذي تريد سرقته*';
   let stiker = false;
   try {
     let [packname, ...author] = text.split('|');
     author = (author || []).join('|');
     const mime = m.quoted.mimetype || '';
-    if (!/webp/.test(mime)) throw '*[❗معلومة❗] قم بالرد على الملصق الذي تريد تجميع حزمة ورقم*';
+    if (!/webp/.test(mime)) throw '*[❗معلومة❗] قم بالرد على الملصق الذي تريد سرقته*';
     const img = await m.quoted.download();
-    if (!img) throw '*[❗معلومة❗] قم بالرد على الملصق الذي تريد تجميع حزمة ورقم*';
+    if (!img) throw '*[❗معلومة❗] قم بالرد على الملصق الذي تريد سرقته*';
     stiker = await addExif(img, packname || global.packname, author || global.author);
   } catch (e) {
     console.error(e);
