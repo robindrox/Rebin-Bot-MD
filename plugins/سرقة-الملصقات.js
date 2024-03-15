@@ -1,6 +1,6 @@
 import {addExif} from '../lib/sticker.js';
 const handler = async (m, {conn, text}) => {
-  if (!m.quoted) throw '*[❗معلومة❗] قم بالرد على الملصق الذي تريد سرقته*';
+  if (!m.quoted) throw '*قم بلاشارة للملصق لي عاوز تخليه بحقوقك وحط حقوقك جنب الامر*';
   let stiker = false;
   try {
     let [packname, ...author] = text.split('|');
