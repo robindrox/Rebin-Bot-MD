@@ -19,7 +19,7 @@ const handler = async (m, {conn, text, command, usedPrefix, args}) => {
   const textm = text.toLowerCase();
   if (textm == astro) {
     global.db.data.users[m.sender].exp += 500;
-    m.reply(`*🔰 Empate!*\n\n*👉🏻 Tu: ${textm}*\n*👉🏻 البوت: ${astro}*\n*🎁 حصلت على +500 XP*`);
+    m.reply(`*🔰 تعادل!*\n\n*👉🏻 انت: ${textm}*\n*👉🏻 البوت: ${astro}*\n*🎁 حصلت على +500 XP*`);
   } else if (text == 'papel') {
     if (astro == 'piedra') {
       global.db.data.users[m.sender].exp += 1000;
