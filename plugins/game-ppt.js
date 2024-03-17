@@ -20,40 +20,40 @@ const handler = async (m, {conn, text, command, usedPrefix, args}) => {
   if (textm == astro) {
     global.db.data.users[m.sender].exp += 500;
     m.reply(`*🔰 تعادل!*\n\n*👉🏻 انت: ${textm}*\n*👉🏻 البوت: ${astro}*\n*🎁 حصلت على +500 XP*`);
-  } else if (text == 'papel') {
-    if (astro == 'piedra') {
+  } else if (text == 'ورق') {
+    if (astro == 'حجر') {
       global.db.data.users[m.sender].exp += 1000;
       m.reply(`*🥳 لقد فزت! 🎉*\n\n*👉🏻 انت: ${textm}*\n*👉🏻 البوت: ${astro}*\n*🎁 حصلت على +1000 XP*`);
     } else {
       global.db.data.users[m.sender].exp -= 300;
       m.reply(`*☠️ انت تخسر! ❌*\n\n*👉🏻 انت: ${textm}*\n*👉🏻 البوت: ${astro}*\n*❌ تم خصم -300 XP*`);
     }
-  } else if (text == 'tijera') {
-    if (astro == 'papel') {
+  } else if (text == 'مقص') {
+    if (astro == 'ورق') {
       global.db.data.users[m.sender].exp += 1000;
       m.reply(`*🥳 لقد فزت! 🎉*\n\n*👉🏻 انت: ${textm}*\n*👉🏻 البوت: ${astro}*\n*🎁 حصلت على +1000 XP*`);
     } else {
       global.db.data.users[m.sender].exp -= 300;
       m.reply(`*☠️ انت تخسر! ❌*\n\n*👉🏻 انت: ${textm}*\n*👉🏻 البوت: ${astro}*\n*❌ تم خصم -300 XP*`);
     }
-  } else if (textm == 'tijera') {
-    if (astro == 'papel') {
+  } else if (textm == 'مقص') {
+    if (astro == 'ورق') {
       global.db.data.users[m.sender].exp += 1000;
       m.reply(`*🥳 لقد فزت! 🎉*\n\n*👉🏻 انت: ${textm}*\n*👉🏻 البوت: ${astro}*\n*🎁 حصلت على +1000 XP*`);
     } else {
       global.db.data.users[m.sender].exp -= 300;
       m.reply(`*☠️ انت تخسر! ❌*\n\n*👉🏻 انت: ${textm}*\n*👉🏻 البوت: ${astro}*\n*❌ تم خصم -300 XP*`);
     }
-  } else if (textm == 'papel') {
-    if (astro == 'piedra') {
+  } else if (textm == 'ورق') {
+    if (astro == 'حجر') {
       global.db.data.users[m.sender].exp += 1000;
       m.reply(`*🥳 لقد فزت! 🎉*\n\n*👉🏻 انت: ${textm}*\n*👉🏻 البوت: ${astro}*\n*🎁 حصلت على +1000 XP*`);
     } else {
       global.db.data.users[m.sender].exp -= 300;
       m.reply(`*☠️ انت تخسر! ❌*\n\n*👉🏻 انت: ${textm}*\n*👉🏻 البوت: ${astro}*\n*❌ تم خصم -300 XP*`);
     }
-  } else if (textm == 'piedra') {
-    if (astro == 'tijera') {
+  } else if (textm == 'حجر') {
+    if (astro == 'مقص') {
       global.db.data.users[m.sender].exp += 1000;
       m.reply(`*🥳 لقد فزت! 🎉*\n\n*👉🏻 انت: ${textm}*\n*👉🏻 البوت: ${astro}*\n*🎁 حصلت على +1000 XP*`);
     } else {
