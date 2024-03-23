@@ -30,7 +30,7 @@ const user = global.db.data.users[m.sender];
     let username = conn.getName(who)
     let math = max - xp
     let sn = createHash('md5').update(who).digest('hex')
-let videoUrl = 'https://telegra.ph/file/a2a1de6434ce22177b26b.mp4'
+let videoUrl = 'https://telegra.ph/file/e7c7147bc03498cbfd529.mp4'
     let totalreg = Object.keys(global.db.data.users).length;
     let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length 
     let more = String.fromCharCode(8206)
@@ -43,7 +43,7 @@ const str =`*⌘━──≼━━「🌸」━━≽──━⌘*
 *🌸╎اهلا بك『${taguser}』*
 *🌸╎تصنيفك『』*
 *🌸╎الخبره『』*
-*🌸╎مستخدمين『』*
+*🌸╎مستخدمين『${rtotal}』*
 *⌘━──≼━━「🌸」━━≽──━⌘*
 
 *˼☜┆أقـسـام اوامـر الـبـوت📄:↡*
