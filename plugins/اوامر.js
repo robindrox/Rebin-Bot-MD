@@ -65,7 +65,7 @@ const caption =`*⌘━──≼━━「🌸」━━≽──━⌘*
 
 await conn.sendMessage( m.chat, {
         video: {
-          url: 'https://telegra.ph/file/a2a1de6434ce22177b26b.mp4'
+          url: 'https://telegra.ph/file/7ae1ccd7d6ae3d7eaa952.mp4'
         },
         caption: caption,
         gifPlayback: true,
