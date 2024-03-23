@@ -21,7 +21,7 @@ const handler = async (m, {conn, text, participants, args}) => {
       const content = getBinaryNodeChild(user, 'add_request');
       const invite_code = content.attrs.code;
       const invite_code_exp = content.attrs.expiration;
-      const teks = `*[❗𝐈𝐍𝐅𝐎❗] 𝙽𝙾 𝙵𝚄𝙴 𝙿𝙾𝚂𝙸𝙱𝙻𝙴 𝙰𝙽̃𝙰𝙳𝙸𝚁 𝙰 @${jid.split('@')[0]}, 𝙴𝚂𝚃𝙾 𝙿𝚄𝙴𝙳𝙴 𝙾𝙲𝚄𝚁𝚁𝙸𝚁 𝙿𝙾𝚁𝚀𝚄𝙴 𝙴𝙻 𝙽𝚄𝙼𝙴𝚁𝙾 𝙴𝚂𝚃𝙴 𝙸𝙽𝙲𝙾𝚁𝚁𝙴𝙲𝚃𝙾, 𝙻𝙰 𝙿𝙴𝚁𝚂𝙾𝙽𝙰 𝚂𝙴 𝙷𝙰𝚈𝙰 𝚂𝙰𝙻𝙸𝙳𝙾 𝚁𝙴𝙲𝙸𝙴𝙽𝚃𝙴𝙼𝙴𝙽𝚃𝙴 𝙳𝙴𝙻 𝙶𝚁𝚄𝙿𝙾 𝙾 𝙻𝙰 𝙿𝙴𝚁𝚂𝙾𝙽𝙰 𝙷𝙰𝚈𝙰 𝙲𝙾𝙽𝙵𝙸𝙶𝚄𝚁𝙰𝙳𝙾 𝚂𝚄 𝙿𝚁𝙸𝚅𝙰𝙲𝙸𝙳𝙰𝙳 𝙳𝙴 𝙶𝚁𝚄𝙿𝙾𝚂, 𝚂𝙴 𝙻𝙴 𝙴𝙽𝚅𝙸𝙾 𝙻𝙰 𝙸𝙽𝚅𝙸𝚃𝙰𝙲𝙸𝙾𝙽 𝙰𝙻 𝙶𝚁𝚄𝙿𝙾 𝙴𝙽 𝚂𝚄 𝙿𝚁𝙸𝚅𝙰𝙳𝙾 𝙰𝙻 𝚄𝚂𝚄𝙰𝚁𝙸𝙾*`;
+      const teks = `*[❗𝐈𝐍𝐅𝐎❗] لم يكن من الممكن إضافة إلى @${jid.split('@')[0]}, قد يحدث هذا بسبب أن الرقم غير صحيح، أو أن الشخص قد غادر المجموعة مؤخرًا أو قام الشخص بتكوين خصوصية مجموعته، أو تم إرسال الدعوة إلى المجموعة إلى المستخدم في حسابه الخاص*`;
       m.reply(teks, null, {mentions: conn.parseMention(teks)});
       const captionn = `Hey!! Hola, me presento, soy The Mystic - Bot, y soy un Bot para WhatsApp, una persona del grupo utilizo el comando para añadirte al grupo, pero no pude agregarte, asi que te mando la invitacion para que te agregues, te esperamos!!`;
       const messaa = await prepareWAMessageMedia({image: jpegThumbnail}, {upload: conn.waUploadToServer});
