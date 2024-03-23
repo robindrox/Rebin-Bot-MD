@@ -19,7 +19,6 @@ let d = new Date(new Date + 3600000)
     let week = d.toLocaleDateString(locale, { weekday: 'long' })
     let date = d.toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' })
     let _uptime = process.uptime() * 1000
-    let uptime = clockString(_uptime)
     let who = m.quoted ? m.quoted.sender : m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
     if (!(who in global.db.data.users)) throw `✳️ The user is not found in my database`
 const user = global.db.data.users[m.sender];
@@ -39,7 +38,7 @@ const caption =`*⌘━──≼━━「🌸」━━≽──━⌘*
 *🌸╎مرحبا بكم في بوت روبين╎🌸*
 *⌘━──≼━━「🌸」━━≽──━⌘*
 *🌸╎اسم البوت『』*
-*🌸╎اهلا بك『』*
+*🌸╎اهلا بك『${taguser}』*
 *🌸╎تصنيفك『』*
 *🌸╎الخبره『』*
 *🌸╎مستخدمين『』*
@@ -65,7 +64,7 @@ const caption =`*⌘━──≼━━「🌸」━━≽──━⌘*
 
 await conn.sendMessage( m.chat, {
         video: {
-          url: 'https://telegra.ph/file/7ae1ccd7d6ae3d7eaa952.mp4'
+          url: 'https://telegra.ph/file/e3faa628ed176ea7021eb.mp4'
         },
         caption: caption,
         gifPlayback: true,
