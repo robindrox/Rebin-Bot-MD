@@ -30,12 +30,13 @@ const user = global.db.data.users[m.sender];
     let username = conn.getName(who)
     let math = max - xp
     let sn = createHash('md5').update(who).digest('hex')
+let videoUrl = 'https://telegra.ph/file/a2a1de6434ce22177b26b.mp4'
     let totalreg = Object.keys(global.db.data.users).length;
     let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length 
     let more = String.fromCharCode(8206)
     let readMore = more.repeat(900) 
     const taguser = '@' +  m.sender.split('@s.whatsapp.net')[0];
-const caption =`*⌘━──≼━━「🌸」━━≽──━⌘*
+const str =`*⌘━──≼━━「🌸」━━≽──━⌘*
 *🌸╎مرحبا بكم في بوت روبين╎🌸*
 *⌘━──≼━━「🌸」━━≽──━⌘*
 *🌸╎اسم البوت『』*
@@ -63,17 +64,12 @@ const caption =`*⌘━──≼━━「🌸」━━≽──━⌘*
 *⌘━──≼━━「🌸」━━≽──━⌘*`
 
 
-await conn.sendMessage( m.chat, {
-        video: {
-          url: 'https://telegra.ph/file/a2a1de6434ce22177b26b.mp4'
-        },
-        caption: caption,
-        gifPlayback: true,
-        gifAttribution: Math.floor( Math.random( ) * 2 ) + 1
-      }, {
-        quoted: m
-      } );
-}
+await conn.sendMessage(m.chat, {
+        video: { url: videoUrl }, caption: str,
+  mentions: [m.sender,global.conn.user.jid],
+  gifPlayback: true,gifAttribution: 0
+    }, { quoted: m });
+};
 
 handler.help = ['allmenu']
 handler.tags = ['main']
@@ -103,4 +99,4 @@ function ucapan() {
         res = "مساء الخير 🌙"
     }
     return res
-}
+        }
