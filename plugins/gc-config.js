@@ -9,7 +9,7 @@ const handler = async (m, {conn, args, usedPrefix, command}) => {
   }[(args[0] || '')];
   if (isClose === undefined) {
     throw `
-*[❗] صيغة خاطئة!!*
+*[❗] يـرجـى تـحـديـد احدى الخـيـارات بالاسـفـل!!*
 
 *┏━━━❲ ✨مثال✨ ❳━━━┓* 
 *┠┉↯ ${usedPrefix + command} فتح*
@@ -17,7 +17,7 @@ const handler = async (m, {conn, args, usedPrefix, command}) => {
 `.trim();
   }
   await conn.groupSettingUpdate(m.chat, isClose);
-  {m.reply('*[ ✔ ] تمت العملية بشكل صحيح*');}
+  {m.reply('*[ ✔ ] تم تغير اعدادات الجروب بنجاح*');}
 };
 handler.help = ['group open / close', 'grupo abrir / cerrar'];
 handler.tags = ['group'];
