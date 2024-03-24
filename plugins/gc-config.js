@@ -9,7 +9,7 @@ const handler = async (m, {conn, args, usedPrefix, command}) => {
   }[(args[0] || '')];
   if (isClose === undefined) {
     throw `
-*[❗] يـرجـى تـحـديـد احدى الخـيـارات بالاسـفـل!!*
+*[❗] يـرجـى تـحـديـد احدى الخـيـارات بالاسـفـل*
 
 *┏━━━❲ ✨مثال✨ ❳━━━┓* 
 *┠┉↯ ${usedPrefix + command} فتح*
@@ -21,7 +21,7 @@ const handler = async (m, {conn, args, usedPrefix, command}) => {
 };
 handler.help = ['group open / close', 'grupo abrir / cerrar'];
 handler.tags = ['group'];
-handler.command = /^(group|جروب)$/i;
+handler.command = /^(جروب)$/i;
 handler.admin = true;
 handler.botAdmin = true;
 export default handler;
