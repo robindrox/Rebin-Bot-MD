@@ -1,10 +1,10 @@
 const handler = async (m, {conn, args, usedPrefix, command}) => {
   const isClose = { // Switch Case Like :v
-    'فتخ': 'not_announcement',
+    'فتح': 'not_announcement',
     'قفل': 'announcement',
-    'فتخ': 'not_announcement',
+    'فتح': 'not_announcement',
     'قفل': 'announcement',
-    'فتخ': 'not_announcement',
+    'فتح': 'not_announcement',
     'قفل': 'announcement',
   }[(args[0] || '')];
   if (isClose === undefined) {
