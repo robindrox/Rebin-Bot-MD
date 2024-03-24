@@ -24,7 +24,7 @@ const handler = async (m, {conn, text, participants}) => {
   if (total == 0) return conn.reply(m.chat, `*[❗] هذه المجموعة نشطة وليس بها أشباح :D*`, m);
   m.reply(`*[ ⚠ أعضاء غير متفاعلين ⚠ ]*\n\n*المجموعة:* ${await conn.getName(m.chat)}\n*عدد الاعضاء:* ${sum}\n\n*[ 👻 تفاعلو ايها الاشباح 👻 ]*\n${sider.map((v) => '  👉🏻 @' + v.replace(/@.+/, '')).join('\n')}\n\n*ملاحظة: هاذا الامر قد لا يكون دقيق 100٪ لان يتم حسب الرسائل بعد دخول البوت الي الجروب*`, null, {mentions: sider});
 };
-handler.command = /^(verfantasmas|fantasmas|sider)$/i;
+handler.command = /^(اشباح)$/i;
 handler.admin = true;
 handler.botAdmin = true;
 export default handler;
