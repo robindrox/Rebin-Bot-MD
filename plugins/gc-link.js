@@ -5,7 +5,7 @@ const handler = async (m, {conn, args}) => {
     contextInfo: {externalAdReply: {mediaUrl: null, mediaType: 1, description: null,
       title: 'رابط المجموعة',
       body: '𝑅𝑂𝐵𝐼𝑁 - 𝐵𝑂𝑇',
-      previewType: 0, thumbnail: fs.readFileSync(''),
+      previewType: 0, thumbnail: fs.readFileSync('./Menu2.jpg'),
       sourceUrl: ``}}});
 };
 handler.help = ['linkgroup'];
