@@ -5,7 +5,8 @@ const handler = async (m, {conn, isOwner}) => {
   const imagewarn = './src/warn.jpg';
   const caption = `⚠️ تحذير المستخدمين\n 
 *⧠━─━─━⧈┋🪷┋⧈━─━─━⧠*
-║ *Total : ${adv.length} Usuarios* ${adv ? '\n' + adv.map(([jid, user], i) => `
+
+*┇المجموع : ${adv.length} Usuarios* ${adv ? '\n' + adv.map(([jid, user], i) => `
 ║
 ║ 1.- ${isOwner ? '@' + jid.split`@`[0] : jid} *(${user.warn}/3)*\n║\n║ - - - - - - - - -`.trim()).join('\n') : ''}
 *⧠━─━─━⧈┋🪷┋⧈━─━─━⧠*`;
