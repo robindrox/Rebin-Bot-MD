@@ -3,12 +3,12 @@ const handler = async (m, {conn, isOwner}) => {
   const warns = global.db.data.users.warn;
   const user = global.db.data.users;
   const imagewarn = './src/warn.jpg';
-  const caption = `⚠️ تحذير المستخدمين\n 
+  const caption = `*⚠️ تحذير المستخدمين*\n 
 *⧠━─━─━⧈┋🪷┋⧈━─━─━⧠*
 
 *┇المجموع : ${adv.length} Usuarios* ${adv ? '\n' + adv.map(([jid, user], i) => `
 *┇*
-*┇* 1.- ${isOwner ? '@' + jid.split`@`[0] : jid} *(${user.warn}/3)*\n║\n║ - - - - - - - - -`.trim()).join('\n') : ''}
+*┇* 1.- ${isOwner ? '@' + jid.split`@`[0] : jid} *(${user.warn}/3)*\n*┇*\n*┇* ─────────────────`.trim()).join('\n') : ''}
 *⧠━─━─━⧈┋🪷┋⧈━─━─━⧠*`;
   await conn.sendMessage(m.chat, {text: caption}, {quoted: m}, {mentions: await conn.parseMention(caption)});
 };
