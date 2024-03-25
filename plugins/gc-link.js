@@ -1,7 +1,7 @@
 import fs from 'fs';
 const handler = async (m, {conn, args}) => {
   const group = m.chat;
-  conn.reply(m.chat, 'https://chat.whatsapp.com/' + await conn.groupInviteCode(group), m, {
+  conn.reply(m.chat,*⛩️رابط المجموعة⛩️/n 'https://chat.whatsapp.com/' + await conn.groupInviteCode(group), m, {
     contextInfo: {externalAdReply: {mediaUrl: null, mediaType: 1, description: null,
       title: 'رابط المجموعة',
       body: '𝑅𝑂𝐵𝐼𝑁 - 𝐵𝑂𝑇',
