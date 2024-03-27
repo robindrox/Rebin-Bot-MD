@@ -13,8 +13,8 @@ global.owner = [
 ];
 
 global.xaxa = 'kana'
-global.suittag = ['21696363626', '21696363626'];
-global.prems = ['21696363626', '21696363626'];
+global.suittag = ['212766343649', '212766343649'];
+global.prems = ['212766343649', '212766343649'];
 
 global.packname = 'GOJO BOT';
 global.author = 'GOJO SATURO';
