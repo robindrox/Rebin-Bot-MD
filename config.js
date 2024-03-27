@@ -7,22 +7,24 @@ import fetch from 'node-fetch';
 import axios from 'axios';
 import moment from 'moment-timezone';
 
+global.botnumber = ""
+global.confirmCode = ""
+
 global.owner = [
-  ['‪212766343649', '𝐿𝐴𝑊 👾, true]
-  ['‪212776626688', '𝑅𝑂𝐵𝐼𝑁 🍓', true]
+  ['212766343649', 'LAW', true],
+  ['212776626688', 'ROBIN', true],
 ];
 
-global.xaxa = 'kana'
-global.suittag = ['212766343649', '212766343649'];
-global.prems = ['212766343649', '212766343649'];
+global.suittag = ['212766343649'];
+global.prems = ['212776626688'];
 
-global.packname = 'GOJO BOT';
-global.author = 'GOJO SATURO';
-global.wm = 'GOJO SATURO';
-global.titulowm = 'GOJO';
-global.titulowm2 = `GOJO`
-global.igfg = 'GOJO';
-global.wait = '*⌛ _جاري التحميل..._*\n\n*▰▰▰▱▱▱▱▱*';
+global.packname = 'Sticker';
+global.author = 'The Mystic - Bot';
+global.wm = 'The Mystic - Bot';
+global.titulowm = 'The Mystic - Bot';
+global.titulowm2 = `The Mystic - Bot`
+global.igfg = 'The Mystic - Bot';
+global.wait = '*[ ⏳ ] Cargando...*';
 
 global.imagen1 = fs.readFileSync('./Menu2.jpg');
 global.imagen2 = fs.readFileSync('./src/nuevobot.jpg');
@@ -31,26 +33,26 @@ global.imagen4 = fs.readFileSync('./Menu.png');
 global.imagen5 = fs.readFileSync('./src/+18.jpg');
 global.imagen6 = fs.readFileSync('./Menu3.png');
 
-global.mods = ['21696363626'];
+global.mods = [];
 
 //* *******Tiempo***************
 global.d = new Date(new Date + 3600000);
-global.locale = 'ar';
+global.locale = 'es';
 global.dia = d.toLocaleDateString(locale, {weekday: 'long'});
-global.fecha = d.toLocaleDateString('ar', {day: 'numeric', month: 'numeric', year: 'numeric'});
-global.mes = d.toLocaleDateString('ar', {month: 'long'});
-global.año = d.toLocaleDateString('ar', {year: 'numeric'});
+global.fecha = d.toLocaleDateString('es', {day: 'numeric', month: 'numeric', year: 'numeric'});
+global.mes = d.toLocaleDateString('es', {month: 'long'});
+global.año = d.toLocaleDateString('es', {year: 'numeric'});
 global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true});
 //* ****************************
-global.wm2 = `▸ ${dia} ${fecha}\n▸ 𝚃𝚑𝚎 𝙼𝚢𝚜𝚝𝚒𝚌 - 𝙱𝚘𝚝`;
-global.gt = 'gojo';
-global.mysticbot = 'gojo';
-global.md = 'https://chat.whatsapp.com/FrMwuvNFNOzGt0BqJmMeWJ';
-global.mysticbot = 'https://chat.whatsapp.com/FrMwuvNFNOzGt0BqJmMeWJ';
-global.waitt = '*⌛ _جاري التحميل..._*\n\n*▰▰▰▱▱▱▱▱*';
-global.waittt = '*⌛ _جاري التحميل..._*\n\n*▰▰▰▱▱▱▱▱*';
-global.waitttt = '*⌛ _جاري التحميل..._*\n\n*▰▰▰▱▱▱▱▱*';
-global.nomorown = '21696363626';
+global.wm2 = `${dia} ${fecha}\nThe Mystic - Bot`;
+global.gt = 'The Mystic - Bot';
+global.mysticbot = 'The Mystic - Bot';
+global.md = 'https://github.com/BrunoSobrino/TheMystic-Bot-MD';
+global.mysticbot = 'https://github.com/BrunoSobrino/TheMystic-Bot-MD';
+global.waitt = '*[ ⏳ ] Cargando...*';
+global.waittt = '*[ ⏳ ] Cargando...*';
+global.waitttt = '*[ ⏳ ] Cargando...*';
+global.nomorown = '5219993404349';
 global.pdoc = ['application/vnd.openxmlformats-officedocument.presentationml.presentation', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/vnd.ms-excel', 'application/msword', 'application/pdf', 'text/rtf'];
 global.cmenut = '❖––––––『';
 global.cmenub = '┊✦ ';
@@ -65,8 +67,8 @@ global.htki = '*⭑•̩̩͙⊱•••• ☪*';
 global.htka = '*☪ ••••̩̩͙⊰•⭑*';
 global.comienzo = '• • ◕◕════';
 global.fin = '════◕◕ • •';
-global.botdate = `⫹⫺ Date :  ${moment.tz('America/Los_Angeles').format('DD/MM/YY')}`; // Asia/Jakarta
-global.bottime = `𝗧 𝗜 𝗠 𝗘 : ${moment.tz('America/Los_Angeles').format('HH:mm:ss')}`;// America/Los_Angeles
+global.botdate = `*[ 📅 ] Fecha:*  ${moment.tz('America/Mexico_City').format('DD/MM/YY')}`;
+global.bottime = `*[ ⏳ ] Hora:* ${moment.tz('America/Mexico_City').format('HH:mm:ss')}`;
 global.fgif = {key: {participant: '0@s.whatsapp.net'}, message: {'videoMessage': {'title': wm, 'h': `Hmm`, 'seconds': '999999999', 'gifPlayback': 'true', 'caption': bottime, 'jpegThumbnail': fs.readFileSync('./Menu.png')}}};
 global.multiplier = 99;
 global.flaaa = [
