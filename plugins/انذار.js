@@ -24,7 +24,7 @@ const handler = async (m, {conn, text, command, usedPrefix}) => {
   await m.reply(
       `${
       user.warn == 1 ? `*@${who.split`@`[0]}*` : `*@${who.split`@`[0]}*`
-      } تلقى تحذيرا في هذه المجموعة!\nMotivo: ${sdms}\n*التحذيرات ${
+      } تلقى تحذيرا في هذه المجموعة!\nالسبب: ${sdms}\n*التحذيرات ${
         user.warn
       }/3*`,
       null,
