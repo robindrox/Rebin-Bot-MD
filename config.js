@@ -7,16 +7,14 @@ import fetch from 'node-fetch';
 import axios from 'axios';
 import moment from 'moment-timezone';
 
-global.botnumber = ""
-global.confirmCode = ""
-
 global.owner = [
   ['212766343649', 'LAW', true],
   ['212776626688', 'ROBIN', true],
 ];
 
-global.suittag = ['212766343649'];
-global.prems = ['212776626688'];
+global.xaxa = 'kana'
+global.suittag = ['212766343649', '212766343649'];
+global.prems = ['212766343649', '212766343649'];
 
 global.packname = 'Sticker';
 global.author = 'The Mystic - Bot';
