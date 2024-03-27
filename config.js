@@ -8,8 +8,8 @@ import axios from 'axios';
 import moment from 'moment-timezone';
 
 global.owner = [
-  ['‪21696363626', '𝐿𝐴𝑊 👾, true]
-  ['‪21696363626', '𝑅𝑂𝐵𝐼𝑁 🍓', true]
+  ['‪212766343649', '𝐿𝐴𝑊 👾, true]
+  ['‪212776626688', '𝑅𝑂𝐵𝐼𝑁 🍓', true]
 ];
 
 global.xaxa = 'kana'
