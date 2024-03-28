@@ -11,7 +11,7 @@ throw '*عذرًا، حدث خطأ، لا يمكن أن يزيد الاسم عن
 }}
 handler.help = ['setname <text>']
 handler.tags = ['group']
-handler.command = /^(الاسم)$/i
+handler.command = /^(تغير-الاسم)$/i
 handler.group = true
 handler.admin = true
 export default handler
