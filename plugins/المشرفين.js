@@ -17,6 +17,6 @@ conn.sendFile(m.chat, pp, 'Menu.jpg', text, m, false, { mentions: [...groupAdmin
 }
 handler.help = ['admins <texto>']
 handler.tags = ['group']
-handler.command = /^(admins|مشرفين|الادمنز|المشرفين|الادمن)$/i
+handler.command = /^(admins|المشرفين)$/i
 handler.group = true
 export default handler
