@@ -1,19 +1,19 @@
 const handler = async (m, {conn, participants, command, usedPrefix}) => {
-  if (!global.db.data.settings[conn.user.jid].restrict) throw '_*< GRUPOS - ELIMINAR />*_\n\n*[ ℹ️ ] El propietario del bot ha activado la función de restricción (*_restrict_*), por lo que no se ejecutó el comando solicitado.*';
-  const kicktext = `_*< GRUPOS - ELIMINAR />*_\n\n*[ ℹ️ ] Etiqueta o responde a un mensaje del participante que deseas eliminar.*\n\n*[ 💡 ] Ejemplo:* _${usedPrefix + command} @${global.suittag}_`;
+  if (!global.db.data.settings[conn.user.jid].restrict) throw '_*< المجموعات - حذف />*_\n\n*[ ℹ️ ] قام مالك الروبوت بتمكين ميزة التقييد، لذلك لم يتم تنفيذ الأمر المطلوب.*';
+  const kicktext = `_*< المجموعات - حذف />*_\n\n*[ ℹ️ ] قم بوضع علامة أو الرد على رسالة من المشارك الذي تريد إزالته.*\n\n*[ 💡 ] مثال:* _${usedPrefix + command} @${global.suittag}_`;
   if (!m.mentionedJid[0] && !m.quoted) return m.reply(kicktext, m.chat, {mentions: conn.parseMention(kicktext)});
-  if (m.message.extendedTextMessage === undefined || m.message.extendedTextMessage === null) return m.reply('_*< GRUPOS - ELIMINAR />*_\n\n*[ ℹ️ ] Etiqueta o responde a un mensaje del participante que deseas eliminar.');
+  if (m.message.extendedTextMessage === undefined || m.message.extendedTextMessage === null) return m.reply('_*< المجموعات - حذف />*_\n\n*[ ℹ️ ] قم بوضع علامة أو الرد على رسالة من المشارك الذي تريد إزالته.');
   if (m.message.extendedTextMessage.contextInfo.participant !== null && m.message.extendedTextMessage.contextInfo.participant != undefined && m.message.extendedTextMessage.contextInfo.participant !== '') {
     const mentioned = m.message.extendedTextMessage.contextInfo.mentionedJid[0] ? m.message.extendedTextMessage.contextInfo.mentionedJid[0] : m.message.extendedTextMessage.contextInfo.participant;
-    if (conn.user.jid.includes(mentioned)) return m.reply('_*< GRUPOS - ELIMINAR />*_\n\n*[ ℹ️ ] El bot no puede eliminarse a si mismo.*');
+    if (conn.user.jid.includes(mentioned)) return m.reply('_*< المجموعات - حذف />*_\n\n*[ ℹ️ ] لا يمكن للبوت حذف نفسه.*');
     const responseb = await conn.groupParticipantsUpdate(m.chat, [mentioned], 'remove');
-    const exitoso1 = `_*< GRUPOS - ELIMINAR />*_\n\n*[ ℹ️ ] El participante @${mentioned.split('@')[0]} fue eliminado.*`;
-    const error1 = `_*< GRUPOS - ELIMINAR />*_\n\n*[ ℹ️ ] @${mentioned.split('@')[0]} es el propietario del grupo, por lo mismo no puede ser eliminado.*`;
-    const error2 = `_*< GRUPOS - ELIMINAR />*_\n\n*[ ℹ️ ] @${mentioned.split('@')[0]} ya fue eliminado o salio del grupo.*`;
+    const exitoso1 = `_*< المجموعات - حذف />*_\n\n*[ ℹ️ ] المشارك @${mentioned.split('@')[0]} تمت إزالته.*`;
+    const error1 = `_*< المجموعات - حذف />*_\n\n*[ ℹ️ ] @${mentioned.split('@')[0]} هو مالك المجموعة، لذلك لا يمكن حذفه.*`;
+    const error2 = `_*< المجموعات - حذف />*_\n\n*[ ℹ️ ] @${mentioned.split('@')[0]} تم بالفعل القضاء عليه أو ترك المجموعة.*`;
     if (responseb[0].status === '200') m.reply(exitoso1, m.chat, {mentions: conn.parseMention(exitoso1)});
     else if (responseb[0].status === '406') m.reply(error1, m.chat, {mentions: conn.parseMention(error1)});
     else if (responseb[0].status === '404') m.reply(error2, m.chat, {mentions: conn.parseMention(error2)});
-    else conn.sendMessage(m.chat, {text: `_*< GRUPOS - ELIMINAR />*_\n\n*[ ℹ️ ] Ocurrió un error. Por favor, inténtalo de nuevo más tarde.*`, mentions: [m.sender], contextInfo: {forwardingScore: 999, isForwarded: true}}, {quoted: m});
+    else conn.sendMessage(m.chat, {text: `_*< المجموعات - حذف />*_\n\n*[ ℹ️ ] حدث خطأ. الرجاء معاودة المحاولة في وقت لاحق.*`, mentions: [m.sender], contextInfo: {forwardingScore: 999, isForwarded: true}}, {quoted: m});
   } else if (m.message.extendedTextMessage.contextInfo.mentionedJid != null && m.message.extendedTextMessage.contextInfo.mentionedJid != undefined) {
     return;
   }
