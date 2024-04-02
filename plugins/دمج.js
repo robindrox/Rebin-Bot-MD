@@ -3,7 +3,7 @@ import MessageType from '@whiskeysockets/baileys';
 import fetch from 'node-fetch';
 import fs from 'fs';
 const handler = async (m, {conn, text, args}) => {
-  if (!args[0]) throw '*[❗معلومة❗] يجب أن يكون استخدام هذا الأمر هاكذا*\n*#دمج <ايموجي 1>&<ايموجي 2>*\n*مثال:*\n*#emojimix 🤨+😣*';
+  if (!args[0]) throw '*[❗معلومة❗] هذا الامر يقوم بدمج اثنين من الايموجياات مع بعض.*\n*مثال:*\n*.دمج 🤨+😣*';
   const [emoji1, emoji2] = text.split`&`;
   const anu = await fetchJson(`https://tenor.googleapis.com/v2/featured?key=AIzaSyAyimkuYQYF_FXVALexPuGQctUWRURdCYQ&contentfilter=high&media_filter=png_transparent&component=proactive&collection=emoji_kitchen_v5&q=${encodeURIComponent(emoji1)}_${encodeURIComponent(emoji2)}`);
   for (const res of anu.results) {
@@ -13,7 +13,7 @@ const handler = async (m, {conn, text, args}) => {
 };
 handler.help = ['emojimix'].map((v) => v + ' emot1|emot2>');
 handler.tags = ['fun'];
-handler.command = /^(emojimix)$/i;
+handler.command = /^(دمج)$/i;
 export default handler;
 const fetchJson = (url, options) => new Promise(async (resolve, reject) => {
   fetch(url, options)
