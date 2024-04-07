@@ -1,14 +1,20 @@
-const handler = async (m, {conn, participants, usedPrefix, command}) => {
-  if (!global.db.data.settings[conn.user.jid].restrict) throw '*[ ⚠️ ] يمتلك المالك تقييدًا (تمكين تقييد/تعطيل تقييد) باستخدام هذا الأمر*';
-  const kicktext = `*[❗] ضع علامة على شخص ما أو قم بالرد على رسالة جماعية لإزالة المستخدم*\n\n*—◉ مثال:*\n*${usedPrefix + command} @${global.suittag}*`;
-  if (!m.mentionedJid[0] && !m.quoted) return m.reply(kicktext, m.chat, {mentions: conn.parseMention(kicktext)});
-  if (m.mentionedJid.includes(conn.user.jid)) return;
-  const user = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted.sender;
-  const owr = m.chat.split`-`[0];
-  await conn.groupParticipantsUpdate(m.chat, [user], 'remove');
-};
-handler.command = /^(طرد)$/i;
-handler.admin = true;
-handler.group = true;
-handler.botAdmin = true;
-export default handler;
+let handler = async (m, { conn, participants, usedPrefix, command }) => {
+	
+let kickte = `*منشن ع الشخص الي هتطرده بره يا حب🥺❤*`
+
+if (!m.mentionedJid[0] && !m.quoted) return m.reply(kickte, m.chat, { mentions: conn.parseMention(kickte)}) 
+let user = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted.sender
+let owr = m.chat.split`-`[0]
+await conn.groupParticipantsUpdate(m.chat, [user], 'remove')
+m.reply(`*تم تطهير  المجموعة من الاوساخ من طرف عمتك روبين*`) 
+
+}
+
+handler.help = ['kick @user']
+handler.tags = ['group']
+handler.command = ['kick', 'طرد'] 
+handler.admin = true
+handler.group = true
+handler.botAdmin = true
+
+export default handler
