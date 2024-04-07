@@ -9,7 +9,7 @@ import moment from 'moment-timezone';
 
 global.owner = [
   ['212766343649', '𝑳𝑨𝑾', true],
-  ['212766343649', '𝑹𝑶𝑩𝑰𝑵', true]
+  ['97334307993', 'Subaro', true]
 ];
 
 global.suittag = ['212766343649','212766343649'];
